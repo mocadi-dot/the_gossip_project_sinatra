@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title> Les potins en vrai !</title>
+  </head>
+  <body>
+    <h2> Voici le premier potin de star ! <%= params[:id] %></h2>
+       <p> Son auteur : <%= gossips.author %></p>
+       <p> Wink wink ;-) : <%= gossips.content %></p>
+
+    <a href="/">Pour revenir à la page potins</a><br/>
+    <a href="/gossips/<%= params['id'] %>/edit/">Pour modifier votre témoignage exclusif !</a>
+  </body>
+</html>
