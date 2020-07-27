@@ -1,6 +1,6 @@
 require 'csv'
 
-class gossip
+class Gossip
   attr_accessor :author, :content
 
   def initialize(author, content)
