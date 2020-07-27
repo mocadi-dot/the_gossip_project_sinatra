@@ -36,7 +36,7 @@ end
   def self.update(id,author,content)
     gossips = []
 
-    # recréé l'arrayt et csv avec les données modifiées.
+    # recréé l'array et csv avec les données modifiées.
 		CSV.read("./db/gossip.csv").each_with_index do |row, index|
 			if id.to_i == (index + 1)    # i
 				gossips << [author, content]
