@@ -6,7 +6,7 @@ Bundler.require
 class ApplicationController < Sinatra::Base
   # Affiche la page d'accueil, potins
     get '/' do
-      erb :index, locals: {gossips: gossip.all}
+      erb :index, locals: {gossips: Gossip.all}
     end
 
     # nouveau ragot
@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/gossips/:id/' do
-    		erb :show, locals: {gossips: gossip.find(params[:id])}
+    		erb :show, locals: {gossips: Gossip.find(params[:id])}
 
     	end
 end
