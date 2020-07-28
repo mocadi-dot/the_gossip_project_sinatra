@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
       # saisie dans gossip.csv
     post '/gossips/new/' do
    # nouvel objet gossip et sauvegarde
-      gossip.new(params["gossip_author"], params["gossip_content"]).save
+      Gossip.new(params["gossip_author"], params["gossip_content"]).save
       redirect '/'  # save et return
     end
 
