@@ -17,7 +17,7 @@ class Gossip
   def self.all
   all_gossips = []
   CSV.read("./db/gossip.csv").each do |csv_line|
-    all_gossips << gossip.new(csv_line[0], csv_line[1])
+    all_gossips << Gossip.new(csv_line[0], csv_line[1])
   end
   return all_gossips
 end
@@ -26,7 +26,7 @@ end
   gossips = []   # permet de stocker la ligne csv demandée
   CSV.read("./db/gossip.csv").each_with_index do |row, index|
     if (id == index+1)          # cherche et check si l'index est égale id demandé
-      gossips << gossip.new(row[0], row[1])    # si trouvé, ajout dans array et break pour retourner l'array
+      gossips << Gossip.new(row[0], row[1])    # si trouvé, ajout dans array et break pour retourner l'array
       break
         end
       end
