@@ -10,7 +10,7 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    rack (2.2.3)
+    rack (2.2.6.2)
     rack-protection (2.0.8.1)
       rack
     ruby2_keywords (0.0.2)
@@ -26,11 +26,12 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   csv
   pry
-  rack (= 2.2.3)
+  rack (= 2.2.6.2)
   shotgun
   sinatra
 
